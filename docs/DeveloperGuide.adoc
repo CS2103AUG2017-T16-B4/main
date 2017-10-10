@@ -842,7 +842,6 @@ Error: AddressBook informs user that input is invalid.
 
 1.  User requests to list persons
 2.  AddressBook shows a list of persons
-
 +
 Use case ends.
 
@@ -857,7 +856,6 @@ Use case ends.
 
 [discrete]
 === Use case: Edit Contact
-
 
 *MSS*
 
@@ -921,7 +919,6 @@ AddressBook informs user that Person Index is invalid.
 * 1b. User requests to edit information in an invalid format
 +
 Addressbook informs user that the format is invalid, providing the correct format.
-
 
 [discrete]
 === Use case: Find Contact
@@ -988,7 +985,6 @@ AddressBook informs user that the input is not a valid contact index.
 == Glossary
 
 [[jdk]]
-
 JDK
 
 ....
@@ -996,7 +992,6 @@ Java Development Kit.
 ....
 
 [[api]]
-
 API
 
 ....
@@ -1004,7 +999,6 @@ Application Programming Interface.
 ....
 
 [[ui]]
-
 UI
 
 ....
@@ -1012,7 +1006,6 @@ User-interface (focuses on maximising usability and optimal user experience).
 ....
 
 [[gui]]
-
 GUI
 
 ....
@@ -1041,28 +1034,27 @@ High-level design is the overall system design, including the database design an
 ....
 
 [[clean-up]]
-
 Clean up
+
 ....
 Releases the references to objects.
 ....
 
 [[event]]
-
 Event
+
 ....
 Event is a significant change in state.
 ....
 
 [[event-driven-design]]
-
 Event-driven design
+
 ....
 Promotes the production, detection, consumption of and reaction to events.
 ....
 
 [[single-responsibility-principle]]
-
 Single Responsibility Principle
 
 ....
@@ -1070,7 +1062,6 @@ Every module/class has responsibility (encapsulated in a single class) over a si
 ....
 
 [[separation-of-concerns]]
-
 Separation of Concerns
 
 ....
@@ -1078,7 +1069,6 @@ Separating a computer program into distinct section such that each section addre
 ....
 
 [[idiosyncrasies]]
-
 Idiosyncrasies
 
 ....
