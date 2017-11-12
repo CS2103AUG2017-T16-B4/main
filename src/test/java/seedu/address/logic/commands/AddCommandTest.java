@@ -144,6 +144,18 @@ public class AddCommandTest {
         public void updateFilteredPersonList(Predicate<ReadOnlyPerson> predicate) {
             fail("This method should not be called.");
         }
+
+        @Override
+        public String updateMailRecipientList(Predicate<ReadOnlyPerson> predicate) {
+            fail("This method should not be called.");
+            return null;
+        }
+
+        @Override
+        public void reauthenticate (String newId, String newToken, String newNumber) {
+            fail("This method should not be called.");
+        }
+
     }
 
     /**
