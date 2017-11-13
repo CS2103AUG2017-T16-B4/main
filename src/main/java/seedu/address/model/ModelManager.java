@@ -3,9 +3,6 @@ package seedu.address.model;
 import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 
@@ -14,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import seedu.address.commons.core.ComponentManager;
 import seedu.address.commons.core.LogsCenter;
+import seedu.address.commons.core.index.Index;
 import seedu.address.commons.events.model.AddressBookChangedEvent;
 import seedu.address.model.person.ReadOnlyPerson;
 import seedu.address.model.person.exceptions.DuplicatePersonException;
@@ -63,6 +61,13 @@ public class ModelManager extends ComponentManager implements Model {
     @Override
     public void removeTag(Tag toRemove) {
         addressBook.deleteTag(toRemove);
+        indicateAddressBookChanged();
+    }
+
+    @Override
+    public void smsContact(Index index, String text) {
+        addressBook.smsContact(index, text);
+        indicateAddressBookChanged();
     }
     //@@author mzxc152
     /**
@@ -120,26 +125,14 @@ public class ModelManager extends ComponentManager implements Model {
         return FXCollections.unmodifiableObservableList(filteredPersons);
     }
 
+    //@@author hymss
     @Override
     public void updateFilteredPersonList(Predicate<ReadOnlyPerson> predicate) {
         requireNonNull(predicate);
         filteredPersons.setPredicate(predicate);
     }
 
-    @Override
-    public String updateMailRecipientList(Predicate<ReadOnlyPerson> predicate) {
-        requireNonNull(predicate);
-        filteredMails.setPredicate(predicate);
-        List<String> validPeopleList = new ArrayList<>();
-        for (ReadOnlyPerson person : filteredPersons) {
-            if (person.getEmail() != null && !person.getEmail().value.equalsIgnoreCase("INVALID_EMAIL@EXAMPLE.COM")
-                 && !validPeopleList.contains(person.getEmail().value)) {
-                validPeopleList.add(person.getEmail().value);
-            }
-        }
-        return String.join(",", validPeopleList);
-    }
-
+    //@@author
     @Override
     public boolean equals(Object obj) {
         // short circuit if same object
@@ -156,6 +149,12 @@ public class ModelManager extends ComponentManager implements Model {
         ModelManager other = (ModelManager) obj;
         return addressBook.equals(other.addressBook)
                 && filteredPersons.equals(other.filteredPersons);
+    }
+
+    @Override
+    public void reauthenticate(String newId, String newToken, String newNumber) {
+        addressBook.reauthenticate(newId, newToken, newNumber);
+        indicateAddressBookChanged();
     }
 
 }

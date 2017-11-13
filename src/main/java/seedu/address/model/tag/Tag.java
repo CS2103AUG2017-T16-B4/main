@@ -29,10 +29,12 @@ public class Tag {
         this.tagName = trimmedName;
     }
 
+    //@@author hymss
     public String getTagName() {
         return this.tagName;
     }
 
+    //@@author
     /**
      * Returns true if a given string is a valid tag name.
      */

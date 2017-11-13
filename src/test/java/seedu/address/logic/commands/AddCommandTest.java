@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import javafx.collections.ObservableList;
+import seedu.address.commons.core.index.Index;
 import seedu.address.logic.CommandHistory;
 import seedu.address.logic.UndoRedoStack;
 import seedu.address.logic.commands.exceptions.CommandException;
@@ -140,16 +141,23 @@ public class AddCommandTest {
             return null;
         }
 
+        //@@author hymss
         @Override
         public void updateFilteredPersonList(Predicate<ReadOnlyPerson> predicate) {
             fail("This method should not be called.");
         }
 
+        //@@author
         @Override
-        public String updateMailRecipientList(Predicate<ReadOnlyPerson> predicate) {
+        public void reauthenticate (String newId, String newToken, String newNumber) {
             fail("This method should not be called.");
-            return null;
         }
+
+        @Override
+        public void smsContact (Index index, String text) {
+            fail("This method should not be called.");
+        }
+
     }
 
     /**

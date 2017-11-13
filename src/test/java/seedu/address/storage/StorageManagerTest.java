@@ -54,6 +54,7 @@ public class StorageManagerTest {
         assertEquals(original, retrieved);
     }
 
+    //@@author hymss
     @Test
     public void addressBookReadSave() throws Exception {
         /*
@@ -71,6 +72,7 @@ public class StorageManagerTest {
         assertEquals(backup, new AddressBook(retrivedBackup));
     }
 
+    //@@author
     @Test
     public void getAddressBookFilePath() {
         assertNotNull(storageManager.getAddressBookFilePath());

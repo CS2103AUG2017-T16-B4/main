@@ -4,47 +4,70 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 :stylesDir: ../stylesheets
 
 == Project: Contags
-Contags, is a desktop address book application that is a development of AddressBook - Level 4, used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 6 kLoC.
+Contags, developed by Team CS2103-T16-B4, is an enhancement and further development of https://github.com/se-edu/addressbook-level4[AddressBook - Level 4], created by team SE-EDU as part of the module 2103, offered by the School of Computing in National University of Singapore. The user interacts with Contags primarily using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.
 
-*Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] {give links to collated code files}
+Contags is a desktop address book application that is tailored to the needs of business professionals. The three main aspects of Contags that make it apt for business professionals are the ease of storing and organising large numbers of contacts, efficient integrated communication and ease of maintaining business relationships.
+
+The following project portfolio describes the enhancements that I have contributed to Contags.
+
+*Code contributed*: [https://github.com/CS2103AUG2017-T16-B4/main/blob/master/collated/main/hymss.md[Functional code]] [https://github.com/CS2103AUG2017-T16-B4/main/blob/master/collated/test/hymss.md[Test code]]
+
+---
 
 === Enhancement Added: Mail Command
 
+---
+
 ==== External behavior
+
+Function: Mailing a contact
 
 include::../UserGuide.adoc[tag=mailContact]
 
 ---
 
 ==== Justification
-Mail is the most used application by working professionals and therefore a mail command is apt and necessary in an address book specifically targeted at working professionals.
+As Contags was developed with the needs of working professionals in mind, a mail command was one of the must-have features. Mail is the most widely used application by business professionals and according to a study done by The Radicarti Group, the average business professional sends 35 emails a day. Having a mail command integrated into an address book application would increase the ease and convenience of sending an email to the desired contact.
+
+---
 
 ==== Implementation
 
-include::../DeveloperGuide.adoc[tag=mailContact]
 include::../DeveloperGuide.adoc[tag=mailcommand]
+
+---
+
+===== Use Case
+
+include::../DeveloperGuide.adoc[tag=mailContact]
 
 ---
 
 === Enhancement Added: Birthday Field
 
+---
+
 ==== Justification
 
-Birthday field is an important field as users would find it useful to keep track of their contacts' birthdays to wish them and maintain business relationships on top of friendships and family relationships.
-
-==== Implementation
+Business professionals would find it useful to keep track of their contacts' birthdays so that they can maintain business relationships on top of friendships and family relationships. In today's world where connections are so necessary and powerful, maintaining business relationships have never been more important. Integrating a birthday field as part of a contact's particulars would help users to have a record of their contacts' birthdays and would make it more convenient for users to wish the colleagues and friends, thereby helping users to maintain and improve their personal and business relationships.
 
 ---
 
+==== Implementation
+
 include::../DeveloperGuide.adoc[tag=birthdayfield]
+
+See pull request https://github.com/CS2103AUG2017-T16-B4/main/pull/37[#37] for full implementation.
 
 ---
 
 === Enhancement Added: ListBirthday Command
 
+---
+
 ==== External behavior
 
----
+Function: Viewing the list of contacts whose birthdays fall on the current date
 
 include::../UserGuide.adoc[tag=listBirthday]
 
@@ -52,34 +75,87 @@ include::../UserGuide.adoc[tag=listBirthday]
 
 ==== Justification
 
-==== Implementation
+As mentioned, the birthday field is an important aspect of a contact's particulars due to the strong business relationships it can forge. To make the birthday field more useful, a listbirthday command is also implemented. This command lists the contacts whose birthday fall on that particular day. Users can then easily send them a mail or SMS by typing in the respective commands.
 
 ---
+
+==== Implementation
 
 include::../DeveloperGuide.adoc[tag=listBirthday]
 
 ---
 
-=== Developer Guide Glossary
+===== Use Case
+
+include::../DeveloperGuide.adoc[tag=listbirthday]
 
 ---
 
-include::../DeveloperGuide.adoc[tag=glossary]
+=== Enhancement Added: Backup Storage Mechanism
 
 ---
 
-=== Enhancement Proposed: Add command `schedule`
+==== Justification
 
-A schedule feature would allow users to create events such as meetings or dinner with other contacts.
+Saving a backup of the data in Contags would help in reverting any changes made to the data that resulted in any data loss or corruption.
+
+---
+
+==== Implementation
+
+include::../DeveloperGuide.adoc[tag=backup]
+
+See pull request https://github.com/CS2103AUG2017-T16-B4/main/pull/23[#23] for full implementation.
+
+---
+
+=== Enhancement Added: Alias for Commands
+
+---
+
+==== Justification
+
+We wanted users to be able to execute their desired commands with as little effort as possible. Therefore, we have added an alternative alias for commands to minimise the amount of typing they have to do.
+
+See pull requests https://github.com/CS2103AUG2017-T16-B4/main/pull/22[#22], https://github.com/CS2103AUG2017-T16-B4/main/pull/124[#124] for full implementation.
+
+---
+
+=== Enhancement Proposed: Meeting Command (v2.0)
+
+---
+
+==== External Behaviour
+
+Function: Creating a meeting event
+
+include::../UserGuide.adoc[tag=meeting]
+
+---
+
+==== Justification
+
+Business professionals spend more time in meetings than doing work. A meeting command would be paramount in maximising the productivity of business professionals as they can easily keep track of their meetings schedules and which contacts are involved in the meeting.
+
+---
+
+==== Implementation
+
+===== Use case
+
+include::../DeveloperGuide.adoc[tag=schedule]
+
+---
 
 === Other contributions
 
-* Added alias for commands (Pull request https://github.com[#22])
-* Added a backup to store contents of addressbook (Pull request https://github.com[#23])
-* Added birthday field (Pull request https://github.com[#37])
-* Updated UI to include a separate browser panel displaying the address of a contact when contact is selected (Pull request https://github.com[#107]])
-* Enhanced find command to find by tags (Pull request https://github.com[#111])
+---
 
-== Project:
+* Updated UI to add new logo and include a separate browser panel displaying the address of a contact when contact is selected (Pull request https://github.com/CS2103AUG2017-T16-B4/main/pull/107[#107])
+* Enhanced find command to find by tags (Pull request https://github.com/CS2103AUG2017-T16-B4/main/pull/111[#111])
+* Wrote manual testing scripts (TestScript.adoc and SampleData.xml) (Pull requests https://github.com/CS2103AUG2017-T16-B4/main/pull/137[#137], https://github.com/CS2103AUG2017-T16-B4/main/pull/123[#123])
+* Wrote glossary and product survey in developer guide (Pull requests https://github.com/CS2103AUG2017-T16-B4/main/pull/3[#3], https://github.com/CS2103AUG2017-T16-B4/main/pull/61[#61])
 
-{Optionally (not graded), you may include other projects in your portfolio.}
+===== Offered feature for reuse
+
+Offered listbirthday command feature for reuse and it was reused by https://github.com/wynkheng[Wyn K Heng]. See the corresponding issue https://github.com/nus-cs2103-AY1718S1/forum/issues/223[here].

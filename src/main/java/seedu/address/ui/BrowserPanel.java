@@ -75,6 +75,7 @@ public class BrowserPanel extends UiPart<Region> {
         field.setText("Social Media");
     }
 
+    //@@author hymss
     /**
      * Loads the address of the contact selected and corresponding google maps page.
      * @param pers
@@ -86,6 +87,7 @@ public class BrowserPanel extends UiPart<Region> {
         setField("Address");
     }
 
+    //@@author seankwekjk
     /**
      * Loads the address of the contact selected and corresponding google maps page through last saved address.
      * Meant to be called by ToggleCommand.

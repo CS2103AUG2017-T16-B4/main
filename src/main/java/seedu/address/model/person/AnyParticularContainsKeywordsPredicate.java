@@ -17,6 +17,7 @@ public class AnyParticularContainsKeywordsPredicate implements Predicate<ReadOnl
         this.keywords = keywords;
     }
 
+    //@@author hymss
     @Override
     public boolean test(ReadOnlyPerson person) {
 
@@ -42,6 +43,7 @@ public class AnyParticularContainsKeywordsPredicate implements Predicate<ReadOnl
                 || keywords.stream().anyMatch(keyword -> StringUtil.containsWordIgnoreCase(allTagNames, keyword));
     }
 
+    //@@author
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
