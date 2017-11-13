@@ -4,7 +4,12 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 :stylesDir: ../stylesheets
 
 == Project: Contags
-"Contags" is a desktop address book application used for organizing, storing, and easily accessing contact information for Business Executives. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 8 kLoC.
+
+Contags, developed by Team CS2103-T16-B4, is an enhancement of the AddressBook - Level 4 Application, created by team SE-EDU as part of the module 2103, offered by the School of Computing in National University of Singapore. The user interacts with Contags primarily using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.
+
+Contags is a desktop address book application, specifically intended to be utilized by English-Speaking business executives. The three main aspects of Contags that we have focused on to achieve this goal include storing and organising large numbers of contacts, efficient integrated communication, and ease of maintaining business relationships.
+
+The following portion of this project portfolio details my personal contributions to the product.
 
 *Code contributed*: [https://github.com/CS2103AUG2017-T16-B4/main/blob/master/collated/main/justuswah.md[Functional code]] [https://github.com/CS2103AUG2017-T16-B4/main/blob/master/collated/test/justuswah.md[Test code]]
 
@@ -148,10 +153,16 @@ https://github.com/nus-cs2103-AY1718S1/forum/issues/225
 
 == Project: OMOF Application
 
-Conceptualized and wrote a portion of a mock "OMOF" Application. The application's purpose is to connect people by allowing users to create nearby events that any other user can join.
+This section documents my contribution to the OMOF Application - this product's purpose is to connect people by allowing users to create nearby events that any other user can join.
+
+=== UI Design
+I conceptualized the UI Design, including the logo, as well as the color schemes.
 
 image::omof1.jpg[width="800]
 Figure 4: OMOF Application User Interface
+
+=== Launch Page
+I assisted in developing and writing code for the launch page, that can be utilized to create events and interact with an online server.
 
 image::omof2.jpg[width="800]
 Figure 5: OMOF Application Launch Page
