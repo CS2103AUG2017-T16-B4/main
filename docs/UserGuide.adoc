@@ -445,7 +445,7 @@ Authenticating a Phone Number on Twilio so Contags can send messages to your pho
 
 3. Now, click on the `Verified Caller IDs` label on the left.
 
-4. Under the Verified Caller IDs Title, click on the `Add new Number` Icon, denoted by the Red Addition Sign. [See Figure 5.17.2]
+4. Under the Verified Caller IDs Title, click on the `Add new Number` Icon, denoted by the Red Addition Sign. [See Figure 5.18.2]
 
 5. Click on the "text you instead" button that is underlined. Type in your phone number. Ensure that the country code is correct (+65).
 
