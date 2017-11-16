@@ -141,6 +141,12 @@ Redesigned the red/white color scheme utilized for the Contags application.
 image::Ui.png[width="800]
 Figure 3: Implementation of new User Interface Colours
 
+=== Reporting of Bugs/Suggestion during the V1.4 Feedback Session
+https://github.com/CS2103AUG2017-W10-B4/main/issues/55
+https://github.com/CS2103AUG2017-W10-B4/main/issues/54
+https://github.com/CS2103AUG2017-W10-B4/main/issues/52
+https://github.com/CS2103AUG2017-W10-B4/main/issues/51
+https://github.com/CS2103AUG2017-W10-B4/main/issues/49
 
 ==== Posted for Reuse: Autocomplete Feature
 https://github.com/nus-cs2103-AY1718S1/forum/issues/227
