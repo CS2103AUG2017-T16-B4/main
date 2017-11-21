@@ -5,9 +5,7 @@ ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
 == Project: Contags
 
-Contags, developed by Team CS2103-T16-B4, is an enhancement of the AddressBook - Level 4 Application, created by team SE-EDU as part of the module 2103, offered by the School of Computing in National University of Singapore. The user interacts with Contags primarily using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC.
-
-Contags is a desktop address book application, specifically intended to be utilized by English-Speaking business executives. The three main aspects of Contags that we have focused on to achieve this goal include storing and organising large numbers of contacts, efficient integrated communication, and ease of maintaining business relationships.
+Contags is an enhanced version of the conventional AddressBook Application, originally forked from the AddressBook Level 4 Repository by the Software Engineering Education team (SE-EDU). It is specifically intended to be utilized by English-Speaking business executives. The three main aspects of Contags that we have focused on to achieve this goal include storing and organising large numbers of contacts, efficient integrated communication, and ease of maintaining business relationships.
 
 The following portion of this project portfolio details my personal contributions to the product.
 
@@ -126,17 +124,7 @@ include::../DeveloperGuide.adoc[tag=reauthenticateUse]
 image::cove_page.jpg[width="790"]
 Figure 1: Cover Page Design
 
-==== User Interface: Implemented the AutoComplete Function in the Application
-
-While typing user input, autocomplete provides suggestions for the user, in reference to the commands that we have provided in this application.
-
-
-image::AutocompleteFunction.png[width="790"]
-Figure 2: Utilization of Autocomplete function popup, to assist user in using commands with the application.
-
-==== User Interface: Implemented the AutoComplete Function in the Application
-
-Redesigned the red/white color scheme utilized for the Contags application.
+==== User Interface: Redesigned the red/white color scheme utilized for the Contags application.
 
 image::Ui.png[width="800]
 Figure 3: Implementation of new User Interface Colours
@@ -147,9 +135,6 @@ https://github.com/CS2103AUG2017-W10-B4/main/issues/54
 https://github.com/CS2103AUG2017-W10-B4/main/issues/52
 https://github.com/CS2103AUG2017-W10-B4/main/issues/51
 https://github.com/CS2103AUG2017-W10-B4/main/issues/49
-
-==== Posted for Reuse: Autocomplete Feature
-https://github.com/nus-cs2103-AY1718S1/forum/issues/227
 
 ==== Posted for Reuse: SMS Command Function
 https://github.com/nus-cs2103-AY1718S1/forum/issues/226
